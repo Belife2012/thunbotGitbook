@@ -1,0 +1,18 @@
+{
+    "title": "Thunder SDK",
+    "author": "邓桂欢",
+    "description": "雷霆产品可以基于Arduino平台或Thunder IDE进行程序开发，本文对此进行相关过程的讲解，并对官方开发包进行说明。",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "雷霆官网": "https://thunder.bellrobot.com/index.html"
+        }
+    }
+}
