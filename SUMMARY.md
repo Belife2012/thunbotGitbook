@@ -17,6 +17,6 @@
     * [小型电机转动](cppprogram/motor/minimotor.md)
   * [传感器](cppprogram/sensor.md)
     * [超声波](cppprogram/sensor/ultrasonic.md)
-    * [触碰](cppprogram/sensor/hong-peng.md)
+    * [触碰](cppprogram/sensor/touch.md)
 * [Python编程](python/README.md)
 
