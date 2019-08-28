@@ -14,5 +14,9 @@
         "sidebar": {
             "雷霆官网": "https://thunder.bellrobot.com/index.html"
         }
-    }
+    },
+    "plugins":[
+        "splitter",
+        "expandable-chapters-small"
+    ]
 }
