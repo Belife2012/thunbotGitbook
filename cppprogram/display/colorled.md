@@ -30,6 +30,15 @@ void LED_COLOR::Set_LEDs_Data(t_color_led_buff data)
  */
 void LED_COLOR::Set_LEDs_Data(uint8_t address, uint8_t *data, uint8_t size)
 
+/* 
+ * 设置彩灯的动态显示模式，有四种模式，
+ *   当设置好模式后，编辑好的彩灯显示将一直以该模式显示直到自行改变
+ * 
+ * @parameters: 动态模式的参数，有四种 0：静态 1：闪烁 2：滚动 3：呼吸
+ * @return: 
+ */
+void LED_COLOR::Set_LED_Dynamic(uint8_t dynamicMode)
+
 /**
  * @brief: 依据显示内存更新显示
  * 
@@ -49,7 +58,7 @@ void LED_COLOR::LED_OFF(void)
 ```cpp
 LED_COLOR::t_color_led_buff colorData = {{182, 180, 245}, {132, 129, 239}, {90, 86, 235}, {44, 39, 228}, {29, 24, 205}, {22, 19, 155}, {182, 180, 245}, {132, 129, 239}, {90, 86, 235}, {44, 39, 228}, {29, 24, 205}, {22, 19, 155}};
 LED_Color.Set_LEDs_Data(colorData);
-LED_Color.Set_LED_Dynamic(COLOR_MODE_BREATH);
+LED_Color.Set_LED_Dynamic(LED_COLOR::COLOR_MODE_BREATH);
 ```
 <br />
 
