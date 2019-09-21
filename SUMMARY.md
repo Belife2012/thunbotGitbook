@@ -25,6 +25,7 @@
         * [巡线](cppprogram/sensor/line.md)
         * [颜色](cppprogram/sensor/color.md)
         * [光线](cppprogram/sensor/light.md)
+        * [彩色](cppprogram/sensor/colorlight.md)
         * [火焰](cppprogram/sensor/flame.md)
         * [空气温湿度](cppprogram/sensor/airHT.md)
         * [湿度探测](cppprogram/sensor/temperature.md)
