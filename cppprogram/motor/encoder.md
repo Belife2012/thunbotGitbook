@@ -1,5 +1,7 @@
 # 编码电机转动
 
+**注意**：编码电机的保护电流为 1A ，当负载很大时，输出功率高于一定水平后会触发保险器件断开，电机就无法正常工作。保险器件被触发后，一般都需要重新开机才能恢复正常。
+
 **常用的 API**：
 ```cpp
 /**
@@ -56,15 +58,17 @@ void MOTOR_THUNDER::Motor_Brake(int motor)
 void MOTOR_THUNDER::Motor_Free(int motor)
 
 /**
- * @brief: 电机控制；范围为-100 ~ 100（负数为反向转，正为正向转；没有做速度控制）
+ * @brief: 电机控制；范围为-255 ~ 255（负数为反向转，正为正向转；没有做速度控制）
+ * Set_Motor_Output 仅仅控制电机 PWM 输出，没有其他控制过程
  * 
  * @param motor: 1 是左电机，2 是右电机
- * @param power: 范围为-100 ~ 100，电池电压变化时，电机输出功率会变化
+ * @param M_output: 范围为-255 ~ 255，电池电压变化时，电机实际输出功率会变化
  */
 void MOTOR_THUNDER::Set_Motor_Output(int motor, int M_output)
 
 /**
- * @brief: 开环控制电机，电机功率随电压浮动的范围较小，在电池电压下降时，回提高电机控制PWM脉宽
+ * @brief: 开环控制电机，电机功率随电压浮动的范围较小，
+ * 在电池电压下降时，会提高电机控制PWM脉宽，保持电机实际输出功率相对稳定
  * 
  * @param motor: 1 是左电机，2 是右电机
  * @param power: 范围为-100 ~ 100，电池电压变化时，会相对于Set_Motor_Output稳定的输出电机功率

@@ -11,7 +11,17 @@ void DISPLAY_SCREEN::Play_Animation(uint8_t Animation_No)
 
 /**
  * @brief: 点亮画面的一个x,y点
- * 
+ *
+ *(0,0)│――――――――――――――――――――――――――――――→ X 轴 
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     ↓                             (17,11)
+ *    Y 轴
  * @param x: 水平轴位置
  * @param y: 垂直轴位置
  */
@@ -51,6 +61,30 @@ void DISPLAY_SCREEN::Play_LED_String(const char *playString)
  * @return: 
  */
 void DISPLAY_SCREEN::Play_LED_String(double number)
+
+/**
+ * @brief: 移动点阵画面
+ *
+ *(0,0)│――――――――――――――――――――――――――――――→ X 轴 
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     │
+ *     ↓                             (17,11)
+ *    Y 轴
+ * @param x: 水平轴的偏移
+ * @param y: 垂直轴的偏移
+ */
+void DISPLAY_SCREEN::Move_Picture_To(int x, int y)
+
+/**
+ * @brief: 清除所有屏幕点阵显示内容
+ * 
+ */
+void DISPLAY_SCREEN::Clear()
 ```
 <br />
 
